@@ -9,6 +9,9 @@ class ShoppingCart implements ShoppingCartInterface
     /** @var SessionManager $sessionManager */
     private $sessionManager;
 
+    /** @var ItemInterface[] $cart */
+    private $cart = [];
+
     public function __construct(SessionManager $sessionManager)
     {
         $this->sessionManager = $sessionManager;
@@ -16,7 +19,7 @@ class ShoppingCart implements ShoppingCartInterface
 
     public function addItemToCart(ItemInterface $item): void
     {
-        // TODO: Implement addItemToCart() method.
+        $this->cart[] = $item;
     }
 
     public function removeItemFromCart(ItemInterface $item): void
@@ -26,7 +29,7 @@ class ShoppingCart implements ShoppingCartInterface
 
     public function getItems(): array
     {
-        // TODO: Implement getItems() method.
+        return $this->cart;
     }
 
     public function emptyCart(): void

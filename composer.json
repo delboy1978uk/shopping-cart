@@ -18,7 +18,8 @@
     },
     "autoload":{
         "psr-4":{
-            "Del\\Cart\\":"src/"
+            "Del\\Cart\\":"src/",
+            "DelTesting\\Cart\\":"tests/unit"
         }
     }
 }
