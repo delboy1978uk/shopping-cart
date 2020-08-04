@@ -10,14 +10,14 @@ class BlankTest extends \Codeception\TestCase\Test
     protected $tester;
 
     /**
-     * @var Blank
+     * @var ShoppingCart
      */
     protected $blank;
 
     protected function _before()
     {
         // create a fresh blank class before each test
-        $this->blank = new Blank();
+        $this->blank = new ShoppingCart();
     }
 
     protected function _after()
